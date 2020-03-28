@@ -1,0 +1,14 @@
+Initial population, (population of Washington County in 2017): 165662
+Initial infected: 1
+Initial recoverd: 0
+Initial dead: 0
+Initial vaccinated: 0
+Tranmission probability, given interaction with infected: 0.8
+Days until recovery: 14
+# per day of regular interaction: 11
+# per day of interaction with social distancing: 3
+Hospital capacity: 45000
+Death rate while hospital capacity NOT reached: 2.0%
+Death rate while hospital capacity reached: 3.4%
+# per day of people vaccinated: 460
+Days before vaccine available: 90
