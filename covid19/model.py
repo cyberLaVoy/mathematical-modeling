@@ -136,19 +136,19 @@ def main():
 
     X = [ i*delta_t for i in range(N+1) ]
     S, I, R, D = basicSIR(delta_t, alpha, beta, gamma, S0, I0, R0, D0, steps)
-    displayModel(X, [S, I, R, D], ["Suseptable", "Infected", "Recovered", "Dead"], "Covid-19 SIDR")
+    displayModel(X, [S, I, R, D], ["Susceptible", "Infected", "Recovered", "Dead"], "Covid-19 SIDR")
     S, I, R, D = basicSIR(delta_t, alphaSocialDist, beta, gamma, S0, I0, R0, D0, steps)
-    displayModel(X, [S, I, R, D], ["Suseptable", "Infected", "Recovered", "Dead"], "Covid-19 SIDR with Social Distancing")
+    displayModel(X, [S, I, R, D], ["Susceptible", "Infected", "Recovered", "Dead"], "Covid-19 SIDR with Social Distancing")
 
     S, I, R, D, V = vaccineSIR(delta_t, alpha, beta, gamma, delta, S0, I0, R0, D0, V0, steps)
-    displayModel(X, [S, I, R, D, V], ["Suseptable", "Infected", "Recovered", "Dead", "Vaccinated"], "Covid-19 SIDRV")
+    displayModel(X, [S, I, R, D, V], ["Susceptible", "Infected", "Recovered", "Dead", "Vaccinated"], "Covid-19 SIDRV")
     S, I, R, D, V = vaccineSIR(delta_t, alphaSocialDist, beta, gamma, delta, S0, I0, R0, D0, V0, steps)
-    displayModel(X, [S, I, R, D, V], ["Suseptable", "Infected", "Recovered", "Dead", "Vaccinated"], "Covid-19 SIDRV with Social Distancing")
+    displayModel(X, [S, I, R, D, V], ["Susceptible", "Infected", "Recovered", "Dead", "Vaccinated"], "Covid-19 SIDRV with Social Distancing")
 
     S, I, R, D, V, Dy, Da, De = vaccineSIRDeathSplit(delta_t, alpha, beta, gamma, delta, S0, I0, R0, D0, V0, steps)
-    displayModel(X, [S, I, R, D, V, Dy, Da, De], ["Suseptable", "Infected", "Recovered", "Total Dead", "Vaccinated", "Dead 20-60", "Dead 60-80", "Dead 80+"], "Covid-19 SIDRV Age Groups")
+    displayModel(X, [S, I, R, D, V, Dy, Da, De], ["Susceptible", "Infected", "Recovered", "Total Dead", "Vaccinated", "Dead 20-60", "Dead 60-80", "Dead 80+"], "Covid-19 SIDRV Age Groups")
     S, I, R, D, V, Dy, Da, De = vaccineSIRDeathSplit(delta_t, alphaSocialDist, beta, gamma, delta, S0, I0, R0, D0, V0, steps)
-    displayModel(X, [S, I, R, D, V, Dy, Da, De], ["Suseptable", "Infected", "Recovered", "Total Dead", "Vaccinated", "Dead 20-60", "Dead 60-80", "Dead 80+"], "Covid-19 SIDRV Age Groups with Social Distancing")
+    displayModel(X, [S, I, R, D, V, Dy, Da, De], ["Susceptible", "Infected", "Recovered", "Total Dead", "Vaccinated", "Dead 20-60", "Dead 60-80", "Dead 80+"], "Covid-19 SIDRV Age Groups with Social Distancing")
 
     with open("model-visuals/constants.txt", 'w') as fout:
         fout.write("Initial population, (population of Washington County in 2017): " + str(S0) + "\n")
